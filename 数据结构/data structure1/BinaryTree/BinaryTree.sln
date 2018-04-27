@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BinaryTree", "BinaryTree\BinaryTree.vcproj", "{308B8017-2741-4500-8869-61336A6FA5BE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{308B8017-2741-4500-8869-61336A6FA5BE}.Debug|Win32.ActiveCfg = Debug|Win32
+		{308B8017-2741-4500-8869-61336A6FA5BE}.Debug|Win32.Build.0 = Debug|Win32
+		{308B8017-2741-4500-8869-61336A6FA5BE}.Release|Win32.ActiveCfg = Release|Win32
+		{308B8017-2741-4500-8869-61336A6FA5BE}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
