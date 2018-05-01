@@ -8,13 +8,13 @@ int main()
 {
     if(fork()==0)
     {
-        sleep(10);
+        sleep(2);
         printf("child=%d\n",getpid());
     }
     else
     {
         printf("parent=%d\n",getppid());
-        waitpid(-1,NULL,0);
+        printf("pid = %d\n",waitpid(-1,NULL,0));
         exit(0);
     }
     return 0;
