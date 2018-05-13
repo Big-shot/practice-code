@@ -59,6 +59,14 @@ public:
     {
         Erase(Size()-1);
     }
+    T& Back()
+    {
+        return *(_finish-1);
+    }
+    T& Front()
+    {
+        return *(_first);
+    }
     void Expand(size_t n)
     {
         int size = Size();
@@ -100,6 +108,10 @@ public:
             ++start;
         }
         --_finish;
+    }
+    void PopFront()
+    {
+        Erase(0);
     }
     size_t Find(const T& x)
     {

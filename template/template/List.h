@@ -68,12 +68,14 @@ public:
     }
     void PopBack() //尾删
     {
-        Node* cur = _head->_prev;
-        _head->_prev = cur->_prev;
-        cur->_prev->_next = _head;
-
-        delete[]cur;
-        cur->_next = cur->_prev = NULL;
+        if(!Empty())
+        {
+            Node* cur = _head->_prev;
+            _head->_prev = cur->_prev;
+            _head->_prev->_next = _head;
+            delete cur;
+            cur->_next = cur->_prev = NULL;
+        }
     }
     void PopFront() //头删
     {
@@ -81,6 +83,7 @@ public:
         _head->_next = cur->_next;
         cur->_next->_prev = _head;
     }
+
     void Insert(Node* pos,const T& x) //随机插入
     {
         Node* cur = new Node;
@@ -133,7 +136,7 @@ public:
     }
     bool Empty()
     {
-        if (_head->_next = _head->_prev)
+        if (_head->_next == _head->_prev)
             return 1;
         return 0;
     }
@@ -147,7 +150,15 @@ public:
         }
         std::cout<<std::endl;
     }
-
+    
+    T& Back() //取尾节点
+    {
+        return _head->_prev->_data;
+    }
+    T& Front() //取头节点数据
+    {
+        return _head->_next->_data;
+    }
 protected:
     Node* _head;
 

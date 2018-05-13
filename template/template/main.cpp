@@ -54,11 +54,14 @@ void ListTest()
 }
 
 
-
+#include "Stack.h"
+#include "Queue.h"
 int main()
 {
   //VectorTest();
-  ListTest();
+  //ListTest();
+    StackTest();
+    //QueueTest();
   return 0;
 }
 
